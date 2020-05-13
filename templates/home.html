@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% if user.is_authenticated %}
+   hello {{ user }} user
+{% endif %}
+{% if user.is_authenticated and user.profile.is_agent %}
+   hello {{ user }} agent
+{% endif %}
+</body>
+</html>
